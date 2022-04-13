@@ -2,20 +2,46 @@
     box-sizing: border-box;
 }
 /*Navbar*/
+.logo{
+    width: 64px;
+    height: 64px;
+    position: absolute;
+    z-index: 1;
+    text-align: center;
+    background-color: rgb(24, 24, 66);
+    padding: 5px;
+}
+.navbar-nav{
+    border-bottom: 10px;
+    border-color: rgb(178, 182, 186);
+}
 .navbar-nav a{
     padding-left: 20px;
-}
-.navbar-nav a:hover {
-    background-color: blue;
 }
 .link-red a{
     text-decoration: none;
     cursor: pointer;
     color: black;
 }
+.showGoUp{
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 50px;
+    width: 64px;
+    height: 64px;
+    background-color: rgb(24, 24, 66);
+    z-index: 999;
+    cursor: pointer;
+}
+/*.ocultarBtn{
+    visibility: hidden;
+    opacity: 0;
+}*/
+
 /*Section - Fondo */
 .fondo{
-    background-image: url('../img/img3.jpeg');
+    background-image: url('../img/bgimg2.jpg');
     background-position: center center;
     background-repeat: no-repeat;
     /*background-attachment: fixed;*/
@@ -44,7 +70,70 @@
     position: absolute;
 }
 /*Section - About Me*/
+.animado{
+    opacity: 0;
+    transition: all 0.5s
+}
+.showUp{
+    animation: showUp 1s;
+}
+@keyframes showUp{
+    0%{
+        transform: translateY(60px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+.foto:hover{
+    background-color: rgb(8, 142, 8);
+}
+.abouttitle{
+    position: relative;
 
+}
+.abouttitle h4{
+    display: inline-block;
+}
+.abouttitle::before{
+    content: '';
+    position: absolute;
+    border-top: 2px solid rgb(4, 4, 69);
+    top: 50%;
+    right: 0;
+    left: 0;
+}
+.info{
+    margin-left: 20px;
+}
+.textme p{
+    line-height: 30px;
+    
+}
+
+/*Section Skills*/
+.skills{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-around;
+    width: 100%;
+    cursor: pointer;
+}
+.skills b{
+    font-size: 20px;
+    margin-top: 7px;
+}
+.skills img{
+    margin: auto;
+    width: 64px;
+    height: 64px;
+    transition: all 0.5s;
+
+}
+.skills:hover img{
+    transform: scale(1.35);
+}
 @media (max-width: 576px) { 
     .fondotxt{
         margin-bottom: 40px;

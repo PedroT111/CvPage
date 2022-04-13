@@ -23,5 +23,19 @@ document.addEventListener('DOMContentLoaded', function(){
             document.body.style.paddingTop = '0';
         }
     })
-})
+});
 
+//btn GoUp fixed
+const btnUp = document.getElementById("btnGoUp");
+console.log(btnUp.style);
+const scroll = () => {
+    console.log('hola')
+    document.documentElement.scrollTop > 20 ? btnUp.style.display = 'block' : btnUp.style.display ='none';
+};
+window.onscroll = () => scroll();
+
+const goUp = () => {
+    document.documentElement.scrollTop = 0;
+};
+
+btnUp.addEventListener('click', goUp);
