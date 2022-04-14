@@ -11,31 +11,34 @@ const typed = new Typed('.typed',{
     cursorChar: '/',
     showCursor: false
 });
-//Header fixed
-document.addEventListener('DOMContentLoaded', function(){
-    window.addEventListener('scroll', function(){
-        if(window.scrollY >= 50){
-            document.getElementById('navbar').classList.add('fixed-top');
-            const navHeight = document.querySelector('navbar').offsetHeight;
-            document.body.style.paddingTop = navHeight + 'px';
-        } else{
-            document.getElementById('navbar').classList.remove('fixed-top');
-            document.body.style.paddingTop = '0';
+
+$(document).ready(function(){
+
+    //Header fixed on scroll
+    $(window).scroll(() => {
+        let scroll = $(window).scrollTop();
+        if(scroll >=50){
+            $('#navbar').addClass('fixed-top');
         }
-    })
+        else{
+            $('#navbar').removeClass('fixed-top');
+        }
+    });
+
+    //Btn Top
+    $(window).scroll(() => {
+        let scroll = $(window).scrollTop();
+        //show btn
+        if(scroll >= 100){
+         $("#btnGoUp").show();   
+        } else{
+            $("#btnGoUp").hide();  
+        }
+    });
+    //go up
+    $("#btnGoUp").click(function(){
+        console.log($('body,html'))
+        $(window).scrollTop(0);
+        return false;
+    });
 });
-
-//btn GoUp fixed
-const btnUp = document.getElementById("btnGoUp");
-console.log(btnUp.style);
-const scroll = () => {
-    console.log('hola')
-    document.documentElement.scrollTop > 20 ? btnUp.style.display = 'block' : btnUp.style.display ='none';
-};
-window.onscroll = () => scroll();
-
-const goUp = () => {
-    document.documentElement.scrollTop = 0;
-};
-
-btnUp.addEventListener('click', goUp);

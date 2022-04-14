@@ -1,6 +1,6 @@
 let animado = document.querySelectorAll(".animado");
 
-function showUp(){
+const showUp = () => {
     let scrollTop = document.documentElement.scrollTop;
     for(let i = 0; i<animado.length; i++){
         let offSet = animado[i].offsetTop;
