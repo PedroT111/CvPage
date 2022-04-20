@@ -31,7 +31,7 @@ body{
     display: none;
     position: fixed;
     bottom: 30px;
-    right: 50px;
+    right: 80px;
     z-index: 999;
     cursor: pointer;
 }
