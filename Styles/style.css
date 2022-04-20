@@ -1,6 +1,10 @@
 *{
     box-sizing: border-box;
 }
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+body{
+    font-family: 'Raleway', sans-serif;
+}
 /*Navbar*/
 .logo{
     width: 64px;
@@ -8,7 +12,7 @@
     position: absolute;
     z-index: 1;
     text-align: center;
-    background-color: rgb(11, 11, 43);
+    background-color: #1D476A;
     padding: 5px;
 }
 .navbar-nav{
@@ -32,13 +36,15 @@
     cursor: pointer;
 }
 .icon-up{
-    color:rgb(24, 24, 66);
+    color:#1D476A;
+    border: 2px white solid;
+    border-radius: 10px;
 }
 
 
 /*Section - Fondo */
 .fondo{
-    background-image: url('../img/img4.jpeg');
+    background-image: url('../img/duotone.png');
     background-position: center center;
     background-repeat: no-repeat;
     /*background-attachment: fixed;*/
@@ -82,8 +88,9 @@
         transform: translateY(0);
     }
 }
-.foto:hover{
-    background-color: rgb(8, 142, 8);
+.foto{
+    border: #1D476A solid 2px;
+
 }
 .abouttitle{
     position: relative;
@@ -91,11 +98,12 @@
 }
 .abouttitle h4{
     display: inline-block;
+    border: #1FC39A solid 3px;
 }
 .abouttitle::before{
     content: '';
     position: absolute;
-    border-top: 2px solid rgb(4, 4, 69);
+    border-top: 3px solid #1D476A;
     top: 50%;
     right: 0;
     left: 0;
@@ -114,7 +122,6 @@
     flex-direction: column;
     text-align: center;
     width: 100%;
-    cursor: pointer;
 }
 .skills b{
     font-size: 20px;
@@ -127,15 +134,61 @@
     transition: all 0.5s;
 
 }
-.skills:hover img{
-    transform: scale(1.35);
-}
 .skillgrid{
     display: grid;
     gap: 1rem;
     grid-auto-rows: 10rem;
     grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
 }
+.btn{
+    background-color: #1FC39A;
+    color: white;
+}
+.btn:hover{
+    background-color: #1D476A;
+    color: white;
+}
+/*Section proyects*/
+.card-body{
+    border: none;
+    padding: 10px;
+    box-shadow: 0 0 20px 7px rgba(0,0,0,0.1);
+    position: relative;
+}
+.card-body h5{
+    padding: 10px;
+    font-weight: 700;
+}
+.card-body p{
+    margin-top: 20px;
+}
+.card-body a{
+    margin-top: auto;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    bottom: 10px;
+    width: 75%;
+    margin: auto;
+}
+.card{
+    margin: auto;
+}
+/*contact-icons*/
+.contact-icons{
+    display: flex;
+    margin-top: 20px;
+}
+.contact-icons p{
+    margin-left: 20px;
+}
+/*footer*/
+.footer{
+    background-color: #1D476A;
+    color: white;
+}
+
 @media (max-width: 576px) { 
     .fondotxt{
         margin-bottom: 40px;
