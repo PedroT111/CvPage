@@ -24,7 +24,6 @@ $(document).ready(function(){
             $('#navbar').removeClass('fixed-top');
         }
     });
-
     //Btn Top
     $(window).scroll(() => {
         let scroll = $(window).scrollTop();
@@ -35,10 +34,12 @@ $(document).ready(function(){
             $("#btnGoUp").hide();  
         }
     });
-    //go up
+        //go up
     $("#btnGoUp").click(function(){
         console.log($('body,html'))
         $(window).scrollTop(0);
         return false;
     });
+
+    
 });

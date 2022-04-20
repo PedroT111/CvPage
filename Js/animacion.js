@@ -1,5 +1,4 @@
 let animado = document.querySelectorAll(".animado");
-
 const showUp = () => {
     let scrollTop = document.documentElement.scrollTop;
     for(let i = 0; i<animado.length; i++){
